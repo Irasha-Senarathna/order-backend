@@ -4,11 +4,10 @@ endpoints:
     type: HTTP
 
 dependencies:
-  resources:
-    - ref: order-db
-      envBindings:
-        DB_HOST: host
-        DB_PORT: port
-        DB_USER: username
-        DB_PASSWORD: password
-        DB_NAME: database
+  - ref: order-db # This MUST match the name of the resource in your Catalog
+    envBindings:
+      DB_HOST: host     # OpenChoreo will inject the actual DB address here
+      DB_PORT: port     # OpenChoreo will inject the actual port (NOT 5432)
+      DB_USER: username
+      DB_PASSWORD: password
+      DB_NAME: database
