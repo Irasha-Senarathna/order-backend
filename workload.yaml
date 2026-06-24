@@ -1,6 +1,6 @@
 endpoints:
-  http:
-    port: 8080
+  - name: backend-api
+    port: 5000
     type: HTTP
 
 dependencies:
