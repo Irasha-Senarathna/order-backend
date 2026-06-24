@@ -1,0 +1,14 @@
+endpoints:
+  http:
+    port: 8080
+    type: HTTP
+
+dependencies:
+  resources:
+    - ref: order-db
+      envBindings:
+        DB_HOST: host
+        DB_PORT: port
+        DB_USER: username
+        DB_PASSWORD: password
+        DB_NAME: database
